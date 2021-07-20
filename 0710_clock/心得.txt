@@ -1,0 +1,26 @@
+HTML
+
+	<body onload="initClock()">
+
+
+CSS
+	-webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255,255,255,0.1));
+    /*鏡射效果*/
+	text-transform: uppercase;
+    /*這我看不懂*/
+	
+	.time span:not(:last-child){}
+
+	.time span:last-child{}
+
+JS
+
+	以if控制12小時制
+	
+	新建立Number的prototype
+
+	week[dname],months[mo] // 其實dname和mo都是拿到0以上的數字，所以可以這樣用，意思等同week[0]...
+
+	以陣列塞入HTML元件
+
+	window.setInterval('updateClock()',1);
