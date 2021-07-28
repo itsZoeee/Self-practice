@@ -1,0 +1,156 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(46, 100%, 50%);
+  --clr-primary-2: hsl(46, 100%, 50%);
+  --clr-primary-3: hsl(49, 96%, 55%);
+  --clr-primary-4: hsl(46, 95%, 60%);
+  /* primary/main color */
+  --clr-primary-5: hsl(59, 100%, 83%);
+  /* lighter shades of primary color */
+  --clr-primary-6: hsla(59, 100%, 72%, 0.473);
+
+  --ff-primary: "Roboto", sans-serif;
+
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--clr-primary-5);
+}
+.wrapper{
+  width: 430px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 30px;
+  box-shadow: 7px 7px 12px rgba(0,0,0,0.05);
+}
+.wrapper header{
+  color: var(--clr-primary-2);
+  font-size: 27px;
+  font-weight: 600;
+  text-align: center;
+}
+.wrapper form{
+  height: 167px;
+  display: flex;
+  cursor: pointer;
+  margin: 30px 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 2px dashed var(--clr-primary-2); /*虛線*/
+}
+form :where(i, p){ /*這是蝦米*/
+  color: var(--clr-primary-2);
+}
+
+form i{
+  font-size: 50px;
+}
+form p{
+  margin-top: 15px;
+  font-size: 16px;
+}
+section .row{
+  margin-bottom: 10px;
+  background: var(--clr-primary-6);
+  list-style: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section .row i{
+  color: var(--clr-primary-2);
+  font-size: 30px;
+} 
+
+section .details span{
+  font-size: 14px;
+}
+.progress-area .row .content{
+  width: 100%;
+  margin-left: 15px;
+}
+.progress-area .details{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 7px;
+  justify-content: space-between;
+}
+/* .name{
+  width: 80px;
+}
+.percent{
+  width: 20px;
+} */
+.progress-area .content .progress-bar{
+  height: 6px;
+  width: 100%;
+  margin-bottom: 4px;
+  background: #fff;
+  border-radius: 30px;
+}
+
+.content .progress-bar .progress{
+  height: 100%;
+  width: 0%; /*進度條長短*/
+  background: var(--clr-primary-2);
+  border-radius: inherit;
+}
+.uploaded-area{
+  max-height: 232px;
+  overflow-y: scroll; /* 若長度超過y軸，就以滾動式呈現*/
+}
+.uploaded-area.onprogress{
+  max-height: 150px;
+}
+.uploaded-area::-webkit-scrollbar{
+  width: 0px; /* 上下滾動軸不見*/
+}
+.uploaded-area .row .content{
+  display: flex;
+  align-items: center;
+}
+.uploaded-area .row .details{
+  display: flex;
+  margin-left: 15px;
+  flex-direction: column;
+}
+.uploaded-area .row .details .size{
+  color: #404040;
+  font-size: 11px;
+}
+.uploaded-area i.fa-check{
+  font-size: 16px;
+}
