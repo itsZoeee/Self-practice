@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  user-select: none;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #fffb008a;
+  padding: 10px;
+  color:#e6c300;
+}
+.pagination ul{
+  display: flex;
+  text-align: center;
+  background: #fff;
+  padding: 8px;
+  border-radius: 50px;
+}
+.pagination ul li{
+  list-style: none;
+  line-height: 45px;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.pagination ul li.num{
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+}
+.pagination ul li.dots{
+  font-size: 22px;
+  cursor: default;
+}
+.pagination ul li.btn{
+  padding: 0 13px;
+}
+.pagination ul li.prev{
+  border-radius: 25px 5px 5px 25px;
+  margin-right: 5px;
+}
+.pagination ul li.next{
+  border-radius: 5px 25px 25px 5px;
+  margin-left: 5px;
+}
+.pagination ul li.active,
+.pagination ul li.num:hover,
+.pagination ul li.btn:hover{
+  background: #ffd900;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+}
